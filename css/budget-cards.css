@@ -1,0 +1,177 @@
+/* Budget Cards Styling */
+.budget-card {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.9) 0%, rgba(39, 174, 96, 0.9) 100%),
+                url('../images/budget.png') center/cover no-repeat;
+    border: 2px solid #27ae60;
+    color: white;
+    position: relative;
+}
+
+/* Hide the regular card image for budget cards and use background instead */
+.budget-card .card-image {
+    display: none;
+}
+
+.budget-card .card-header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 8px 8px 0 0;
+    padding: 20px 24px;
+    margin: -24px -24px 20px -24px;
+}
+
+.budget-card .card-header h3 {
+    color: white;
+    font-weight: 900;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.budget-value {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 1.4em;
+    text-shadow: none;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Reduce icon sizes to make images the center of attention */
+.coffee-amount i, 
+.money-icon,
+.card-header i {
+    font-size: 1.2em !important;
+    opacity: 0.7;
+}
+
+.money-icon {
+    font-size: 4em;
+    text-align: center;
+    margin: 20px 0;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.budget-card .card-content {
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    margin: -24px -24px 20px -24px;
+    padding: 30px 24px;
+    border-radius: 0;
+}
+
+.budget-card .card-content strong {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.budget-card .card-content p {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.budget-card .details {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.budget-card .card-footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(3px);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 15px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Different money denominations colors - all use budget.png as background */
+.budget-card:nth-child(1) {
+    /* $5 bill - light green overlay */
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.85) 0%, rgba(39, 174, 96, 0.85) 100%),
+                url('../images/budget.png') center/cover no-repeat;
+}
+
+.budget-card:nth-child(2) {
+    /* $10 bill - medium green overlay */
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.85) 0%, rgba(34, 153, 84, 0.85) 100%),
+                url('../images/budget.png') center/cover no-repeat;
+}
+
+.budget-card:nth-child(3) {
+    /* $20 bill - blue green overlay */
+    background: linear-gradient(135deg, rgba(23, 162, 184, 0.85) 0%, rgba(19, 132, 150, 0.85) 100%),
+                url('../images/budget.png') center/cover no-repeat;
+}
+
+.budget-card:nth-child(4) {
+    /* $50 bill - purple overlay */
+    background: linear-gradient(135deg, rgba(111, 66, 193, 0.85) 0%, rgba(90, 50, 163, 0.85) 100%),
+                url('../images/budget.png') center/cover no-repeat;
+}
+
+.budget-card:nth-child(5) {
+    /* $100 bill - gold overlay */
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.85) 0%, rgba(230, 126, 34, 0.85) 100%),
+                url('../images/budget.png') center/cover no-repeat;
+}
+
+/* Enhanced styling for different denominations */
+.budget-card:nth-child(1) .budget-value {
+    background: linear-gradient(45deg, #ffffff 0%, #e8f5e8 100%);
+    color: #27ae60;
+    border-color: #2ecc71;
+}
+
+.budget-card:nth-child(2) .budget-value {
+    background: linear-gradient(45deg, #ffffff 0%, #e6f3e6 100%);
+    color: #229954;
+    border-color: #27ae60;
+}
+
+.budget-card:nth-child(3) .budget-value {
+    background: linear-gradient(45deg, #ffffff 0%, #e6f7f9 100%);
+    color: #138496;
+    border-color: #17a2b8;
+}
+
+.budget-card:nth-child(4) .budget-value {
+    background: linear-gradient(45deg, #ffffff 0%, #f0ecf7 100%);
+    color: #5a32a3;
+    border-color: #6f42c1;
+}
+
+.budget-card:nth-child(5) .budget-value {
+    background: linear-gradient(45deg, #ffffff 0%, #fdf4e6 100%);
+    color: #e67e22;
+    border-color: #f39c12;
+    font-size: 1.6em;
+    padding: 10px 24px;
+    animation: pulse 2s infinite;
+}
+
+/* Special animation for the $100 bill */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+}

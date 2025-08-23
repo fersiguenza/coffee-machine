@@ -1,0 +1,153 @@
+/* Constraint Cards */
+.constraint-card {
+    border-left: 6px solid #e74c3c;
+}
+
+.constraint-card.breakdown {
+    border-left-color: #c0392b;
+}
+
+.constraint-card.resources {
+    border-left-color: #f39c12;
+}
+
+.constraint-card.overtime {
+    border-left-color: #9b59b6;
+}
+
+.constraint-card.quality {
+    border-left-color: #e67e22;
+}
+
+.constraint-card.power {
+    border-left-color: #34495e;
+}
+
+/* Effect Badges */
+.effect {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.effect.negative {
+    background: #fadbd8;
+    color: #e74c3c;
+}
+
+.effect.critical {
+    background: #2c3e50;
+    color: white;
+}
+
+.effect.warning {
+    background: #fdeaa7;
+    color: #f39c12;
+}
+
+/* Task Cards */
+.task-card {
+    border-left: 6px solid #3498db;
+}
+
+.task-card.maintenance {
+    border-left-color: #16a085;
+}
+
+.task-card.admin {
+    border-left-color: #f39c12;
+}
+
+.task-card.training {
+    border-left-color: #9b59b6;
+}
+
+.task-card.communication {
+    border-left-color: #e67e22;
+}
+
+.time-cost {
+    background: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Resource Cards */
+.resource-card {
+    border-left: 6px solid #27ae60;
+}
+
+.resource-card.supply {
+    border-left-color: #f39c12;
+}
+
+.resource-card.equipment {
+    border-left-color: #34495e;
+}
+
+.resource-card.boost {
+    border-left-color: #e74c3c;
+}
+
+.resource-card.staff {
+    border-left-color: #9b59b6;
+}
+
+.resource-card.rest {
+    border-left-color: #16a085;
+}
+
+.resource-type {
+    background: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Event Cards */
+.event-card {
+    border-left: 6px solid #95a5a6;
+}
+
+.event-card.positive {
+    border-left-color: #2ecc71;
+}
+
+.event-card.negative {
+    border-left-color: #e74c3c;
+}
+
+.event-card.neutral {
+    border-left-color: #95a5a6;
+}
+
+.event-type {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.event-type.good {
+    background: #d5f4e6;
+    color: #27ae60;
+}
+
+.event-type.bad {
+    background: #fadbd8;
+    color: #e74c3c;
+}
+
+.event-type.neutral {
+    background: #ecf0f1;
+    color: #7f8c8d;
+}

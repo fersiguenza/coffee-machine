@@ -1,0 +1,49 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-selector {
+        gap: 5px;
+    }
+    
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    
+    /* Instructions responsive design */
+    .instructions-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .instructions-header h2 {
+        font-size: 1.8em;
+    }
+    
+    .setup-grid,
+    .card-types-grid,
+    .scoring-grid,
+    .rules-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .variations-grid {
+        grid-template-columns: 1fr;
+    }
+}

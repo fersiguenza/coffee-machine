@@ -1,0 +1,67 @@
+/* Objective Cards Specific Styles */
+.objective-card {
+    border-left: 4px solid #3498db;
+}
+
+.objective-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.objective-card .difficulty {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.objective-card .difficulty.easy {
+    background-color: #d5f4e6;
+    color: #27ae60;
+}
+
+.objective-card .difficulty.medium {
+    background-color: #fff3cd;
+    color: #f39c12;
+}
+
+.objective-card .difficulty.hard {
+    background-color: #f8d7da;
+    color: #e74c3c;
+}
+
+.objective-card .difficulty.impossible {
+    background-color: #d1ecf1;
+    color: #17a2b8;
+}
+
+.objective-card .target {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+.objective-card .details p {
+    margin: 6px 0;
+    font-size: 0.9em;
+}
+
+.objective-card.easy {
+    border-left-color: #27ae60;
+}
+
+.objective-card.medium {
+    border-left-color: #f39c12;
+}
+
+.objective-card.hard {
+    border-left-color: #e74c3c;
+}
+
+.objective-card.impossible {
+    border-left-color: #17a2b8;
+}

@@ -1,0 +1,27 @@
+/* Coffee Machine Workshop - Main Stylesheet */
+/* Modular CSS Architecture - Import all stylesheets */
+
+/* Base styles and utilities */
+@import url('./css/base.css');
+
+/* Layout components */
+@import url('./css/header.css');
+@import url('./css/navigation.css');
+
+/* Card components */
+@import url('./css/cards-base.css');
+@import url('./css/order-cards.css');
+@import url('./css/objective-cards.css');
+@import url('./css/budget-cards.css');
+@import url('./css/other-cards.css');
+
+/* Page sections */
+@import url('./css/instructions.css');
+@import url('./css/modals.css');
+
+/* Interactive elements */
+@import url('./css/animations.css');
+
+/* Media queries */
+@import url('./css/responsive.css');
+@import url('./css/print.css');
