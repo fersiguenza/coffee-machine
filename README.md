@@ -1,170 +1,110 @@
-# ☕ Workshop: La Máquina de Café
+![Coffee Machine Workshop Logo](logo.png)
 
-## Sistema de Gestión de Capacidad y Recursos
+# ☕ Coffee Machine Workshop
 
-Este proyecto proporciona un sistema completo de cartas imprimibles para el workshop "La máquina de café: Capacidad, límites, burn out, demandas no priorizadas y gestión de recursos".
+## Capacity and Resource Management System
 
-### 🎯 Objetivo del Workshop
+This project provides a complete printable card system for the workshop "The Coffee Machine: Capacity, limits, burnout, unprioritized demands, and resource management".
+Keep in mind I've vibecoded most of this, and while I tried to adjust and keep good practices, I wanted to have the game ready. Also keep in mind that the goal is it runs on github pages as well for people withouth coding skills to easily access to it so there might be some limitations of what we can do!
+Feel free to contribute with improvements!
 
-Demostrar cómo la capacidad de una máquina (o un equipo) puede ser limitada y cómo el exceso de demanda, el trabajo fuera de hora, las demandas no priorizadas y la gestión de recursos pueden afectar su rendimiento y llevar al burn out.
+### 🎯 Workshop Objective
 
-### 📋 Tipos de Cartas Incluidas
+Demonstrate how a machine's (or team's) capacity can be limited and how excessive demand, overtime work, unprioritized demands, and resource management can affect performance and lead to burnout.
 
-#### 1. **Cartas de Pedidos** 📋
-- **Pedidos Simples**: 1-2 cafés (Prioridad baja)
-- **Pedidos Medios**: 3-5 cafés (Prioridad media)
-- **Pedidos Complejos**: 6-12 cafés (Prioridad alta)
-- **Pedidos Urgentes**: Tiempo límite reducido con penalizaciones
+### 📋 Included Card Types
 
-#### 2. **Cartas de Limitaciones** ⚠️
-- **Averías**: Menor y mayor con diferentes impactos
-- **Escasez de Recursos**: Limitaciones en la producción
-- **Burn Out**: Efectos del trabajo excesivo
-- **Problemas de Calidad**: Riesgo de rechazo de pedidos
-- **Eventos Externos**: Cortes de energía, etc.
+#### 1. **Order Cards** 📋
+- **Simple Orders**: 1-2 coffees (Low priority)
+- **Medium Orders**: 3-5 coffees (Medium priority)
+- **Complex Orders**: 6-12 coffees (High priority)
+- **Urgent Orders**: Reduced time limit with penalties
 
-#### 3. **Cartas de Tareas Menores** 🔧
-- **Mantenimiento**: Limpieza, revisión, calibración
-- **Administrativas**: Inventario, documentación
-- **Capacitación**: Mejoras a largo plazo
-- **Comunicación**: Coordinación del equipo
+#### 2. **Constraint Cards** ⚠️
+- **Breakdowns**: Minor and major with different impacts
+- **Resource Shortage**: Production limitations
+- **Burn Out**: Effects of excessive work
+- **Quality Issues**: Risk of order rejection
+- **External Events**: Power outages, etc.
 
-#### 4. **Cartas de Recursos** 📦
-- **Reabastecimiento**: Granos de café (normal y express)
-- **Soporte Técnico**: Reparación de averías
-- **Equipos Adicionales**: Máquinas auxiliares
-- **Personal**: Ayuda temporal
-- **Descanso**: Recuperación del burn out
+#### 3. **Minor Task Cards** 🔧
+- **Maintenance**: Cleaning, inspection, calibration
+- **Administrative**: Inventory, documentation
+- **Training**: Long-term improvements
+- **Communication**: Team coordination
 
-#### 5. **Cartas de Eventos** 🎲
-- **Eventos Positivos**: Bonificaciones y oportunidades
-- **Eventos Negativos**: Desafíos adicionales
-- **Eventos Neutros**: Cambios en las condiciones
+#### 4. **Resource Cards** 📦
+- **Restocking**: Coffee beans (normal and express)
+- **Technical Support**: Breakdown repairs
+- **Additional Equipment**: Auxiliary machines
+- **Personnel**: Temporary help
+- **Rest**: Burnout recovery
 
-### 🖥️ Características del Sistema
+#### 5. **Event Cards** 🎲
+- **Positive Events**: Bonuses and opportunities
+- **Negative Events**: Additional challenges
+- **Neutral Events**: Changing conditions
 
-#### Navegación Intuitiva
-- Botones para alternar entre tipos de cartas
-- Vista de "Todas las Cartas" para impresión completa
-- Interfaz responsive para diferentes dispositivos
+### 📖 How to Use
 
-#### Funcionalidades de Impresión
-- **CSS optimizado para impresión**: Diseño limpio y legible
-- **Formato de 3 columnas**: Máximo aprovechamiento del papel
-- **Page-break optimization**: Evita cortar cartas entre páginas
-- **Contraste alto**: Excelente legibilidad en impresión
+#### For Facilitators:
 
-#### Herramientas para Facilitadores
-- **Sets Personalizados**: Crea combinaciones específicas de cartas
-- **Configuración Guardable**: Guarda y carga configuraciones del workshop
-- **Atajos de Teclado**:
-  - `Ctrl+P` (Cmd+P): Imprimir sección actual
-  - `Ctrl+S` (Cmd+S): Guardar configuración
-  - `Ctrl+L` (Cmd+L): Cargar configuración
+1. **Preparation**:
+   - Open `index.html` in any web browser
+   - Select necessary cards for the session
+   - Use "Create Custom Set" for specific configurations
 
-### 📖 Cómo Usar
+2. **Printing**:
+   - Select the desired card section
+   - Click "Print Current Section" or use Ctrl+P
+   - Configure printer for best quality (color recommended)
 
-#### Para Facilitadores:
+3. **During the Workshop**:
+   - Distribute cards according to planned dynamics
+   - Use utility tools to manage time
+   - Apply events and constraints based on progress
 
-1. **Preparación**:
-   - Abrir `index.html` en cualquier navegador web
-   - Seleccionar las cartas necesarias para la sesión
-   - Usar "Crear Set Personalizado" para configuraciones específicas
+#### For Teams:
 
-2. **Impresión**:
-   - Seleccionar la sección de cartas deseada
-   - Hacer clic en "Imprimir Sección Actual" o usar Ctrl+P
-   - Configurar impresora para mejor calidad (color recomendado)
+1. **Receive cards** for orders and constraints
+2. **Plan strategy** considering available resources
+3. **Execute orders** within time limits
+4. **Manage resources** proactively
+5. **Adapt** to constraints and events
 
-3. **Durante el Workshop**:
-   - Distribuir cartas según la dinámica planificada
-   - Usar las herramientas de utilidad para gestionar el tiempo
-   - Aplicar eventos y limitaciones según el progreso
+#### Compatibility:
+- **Browsers**: Chrome, Firefox, Safari, Edge (modern versions)
+- **Printing**: Optimized for letter size paper (8.5" x 11")
+- **Devices**: Desktop, tablet, mobile (responsive)
 
-#### Para Equipos:
+### 🎯 Learning Objectives
 
-1. **Recibir cartas** de pedidos y limitaciones
-2. **Planificar estrategia** considerando recursos disponibles
-3. **Ejecutar pedidos** dentro de los límites de tiempo
-4. **Gestionar recursos** proactivamente
-5. **Adaptarse** a limitaciones y eventos
+#### For Participants:
+1. **Capacity Management**: Understand limits and optimization
+2. **Prioritization**: Make decisions under pressure
+3. **Resource Planning**: Anticipate needs
+4. **Teamwork**: Effective coordination
+5. **Adaptability**: Respond to unexpected changes
 
-### 🎮 Mecánicas del Juego
+#### For Facilitators:
+1. **Observe Patterns**: Identify behaviors
+2. **Generate Discussion**: Facilitate post-activity reflection
+3. **Connect to Reality**: Link to work situations
+4. **Assess Understanding**: Measure learning
 
-#### Sistema de Puntos:
-- **Pedidos Simples**: +1 punto
-- **Pedidos Medios**: +2 puntos
-- **Pedidos Complejos**: +3-4 puntos
-- **Pedidos Urgentes**: +3-5 puntos (con penalizaciones por retraso)
+### Contributions
 
-#### Gestión de Recursos:
-- **Granos de café**: Limitados, requieren reabastecimiento
-- **Tiempo**: Cada acción consume tiempo
-- **Calidad**: Mantenimiento afecta la calidad del producto
+This system is designed to be flexible and adaptable. Modifications can be made according to specific workshop or organizational needs.
 
-#### Condiciones de Burn Out:
-- Se activa después de 6 pedidos consecutivos
-- Reduce la eficiencia significativamente
-- Requiere tiempo de descanso para recuperarse
-
-### 🛠️ Configuración Técnica
-
-#### Estructura de Archivos:
-```
-coffee-machine/
-├── index.html          # Página principal con todas las cartas
-├── styles.css          # Estilos CSS (pantalla e impresión)
-├── script.js           # Funcionalidad interactiva
-└── README.md           # Este archivo
-```
-
-#### Compatibilidad:
-- **Navegadores**: Chrome, Firefox, Safari, Edge (versiones modernas)
-- **Impresión**: Optimizado para papel tamaño carta (8.5" x 11")
-- **Dispositivos**: Desktop, tablet, móvil (responsive)
-
-### 📚 Extensiones y Personalizaciones
-
-#### Agregar Nuevas Cartas:
-1. Duplicar una carta existente en el HTML
-2. Modificar el contenido (título, descripción, efectos)
-3. Ajustar clases CSS para el estilo apropiado
-
-#### Modificar Dificultad:
-- **Fácil**: Más recursos, menos limitaciones
-- **Medio**: Balance estándar
-- **Difícil**: Recursos limitados, más eventos negativos
-
-#### Crear Variaciones Temáticas:
-- Cambiar de café a otros productos/servicios
-- Adaptar terminología a diferentes industrias
-- Modificar métricas según el contexto
-
-### 🎯 Objetivos de Aprendizaje
-
-#### Para Participantes:
-1. **Gestión de Capacidad**: Entender límites y optimización
-2. **Priorización**: Tomar decisiones bajo presión
-3. **Planificación de Recursos**: Anticipar necesidades
-4. **Trabajo en Equipo**: Coordinación efectiva
-5. **Adaptabilidad**: Responder a cambios inesperados
-
-#### Para Facilitadores:
-1. **Observar Patrones**: Identificar comportamientos
-2. **Generar Discusión**: Facilitar reflexión post-actividad
-3. **Conectar con Realidad**: Vincular con situaciones laborales
-4. **Evaluar Comprensión**: Medir el aprendizaje
-
-### 📞 Soporte y Contribuciones
-
-Este sistema está diseñado para ser flexible y adaptable. Se pueden realizar modificaciones según las necesidades específicas del workshop o la organización.
-
-Para mejoras o adaptaciones específicas, considere:
-- Agregar nuevos tipos de cartas
-- Implementar sistemas de scoring más complejos
-- Integrar temporizadores automáticos
-- Crear variaciones para diferentes industrias
+For improvements or specific adaptations, consider:
+- Adding new card types
+- Implementing more complex scoring systems
+- Integrating automatic timers
+- Creating variations for different industries
+- Fixing huge files
+- Adding more languages or fixing some translations
+- Feel free to submit PRs with improvements, suggestions, or fork and build your own, but keep it free so more teams can benefit from the real pourpose!
 
 ---
 
-**¡Disfruta del workshop y que sea una experiencia de aprendizaje valiosa para todos los participantes!** ☕✨
+**Enjoy the workshop and may it be a valuable learning experience for all participants!** ☕✨

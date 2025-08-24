@@ -20,8 +20,9 @@
 /* Cards Grid */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
+    grid-auto-rows: 590px; /* Increased by 40px to match card height */
 }
 
 /* Base Card Styles */
@@ -35,10 +36,12 @@
     page-break-inside: avoid;
     break-inside: avoid;
     position: relative;
-    overflow: hidden;
-    min-height: 280px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    height: 590px; /* Increased by 40px to prevent scrollbars */
+    min-height: 590px; /* Ensure minimum height */
+    box-sizing: border-box; /* Include padding in height calculation */
 }
 
 .card:hover {
@@ -67,25 +70,32 @@
     margin-bottom: 20px;
     color: #495057;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
 }
+
+
 
 .card-footer {
     border-top: 1px solid #ecf0f1;
     background-color: #f8f9fa;
     padding: 8px 16px;
-    margin: 16px -16px -16px;
     text-align: center;
     color: #7f8c8d;
-    font-size: 0.85em;
+    font-size: 1.5em;
     border-radius: 0 0 8px 8px;
+    margin-top: auto;
 }
 
 /* Card Image Styles */
 .card-image {
-    width: 280px;
-    height: 280px;
-    margin: 0 auto 15px;
-    display: block;
+    width: 220px;
+    height: 220px;
     object-fit: contain;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -109,4 +119,176 @@
 
 #custom-section h2 {
     color: #3498db;
+}
+
+/* Special sizing for budget cards - they should maintain flexible height */
+.budget-card {
+    height: auto !important;
+    min-height: 280px;
+}
+
+/* Budget cards container - use different grid */
+#budget-section .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card {
+        height: auto;
+        min-height: 320px;
+    }
+    
+    .card-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 16px;
+        min-height: 280px;
+    }
+    
+    .card-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Beans Cards Styles */
+.beans-card {
+    border: 2px solid #8B4513;
+    background: linear-gradient(135deg, #f8f4e6 0%, #ede2c4 100%);
+}
+
+.beans-card .card-header {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 12px;
+    margin: -24px -24px 16px -24px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.beans-card .card-header h3 {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.beans-card .bean-type {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.beans-card .bean-amount {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #8B4513;
+    text-align: center;
+    margin: 12px 0;
+    background: rgba(139, 69, 19, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.beans-card .details {
+    flex-grow: 1;
+    margin: 16px 0;
+}
+
+.beans-card .details p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #4a4a4a;
+}
+
+.beans-card .details strong {
+    color: #8B4513;
+    font-weight: 600;
+}
+
+.beans-card .card-footer {
+    background: rgba(139, 69, 19, 0.1);
+    margin: 16px -24px -24px -24px;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.beans-card .card-footer small {
+    color: #8B4513;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Bean Cost Display for Order and Constraint Cards */
+.bean-cost {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin: 12px 0;
+    font-size: 1.1em;
+    box-shadow: 0 3px 12px rgba(139, 69, 19, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative; /* Ensure proper stacking */
+    z-index: 5; /* Make sure it's above other elements */
+}
+
+.bean-cost.constraint {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Bean Type Variations */
+.beans-card.medium .card-header {
+    background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+}
+
+.beans-card.premium .card-header {
+    background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+}
+
+.beans-card.bulk .card-header {
+    background: linear-gradient(135deg, #654321 0%, #8B4513 100%);
+}
+
+.beans-card.medium .bean-amount {
+    color: #D2691E;
+    background: rgba(210, 105, 30, 0.1);
+    border-color: rgba(210, 105, 30, 0.2);
+}
+
+.beans-card.premium .bean-amount {
+    color: #B8860B;
+    background: rgba(184, 134, 11, 0.1);
+    border-color: rgba(184, 134, 11, 0.2);
+}
+
+.beans-card.bulk .bean-amount {
+    color: #654321;
+    background: rgba(101, 67, 33, 0.1);
+    border-color: rgba(101, 67, 33, 0.2);
 }

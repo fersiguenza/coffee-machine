@@ -6,10 +6,33 @@ class LanguageManager {
     }
 
     init() {
+        // First initialize translations
+        if (typeof initializeTranslations === 'function') {
+            initializeTranslations();
+        }
+        
+        // Then setup the language selector
         this.setupLanguageSelector();
-        // Use the global initializeLanguage function from translations.js
-        if (typeof initializeLanguage === 'function') {
-            initializeLanguage();
+        
+        // Load saved language preference from localStorage
+        this.loadSavedLanguage();
+    }
+    
+    loadSavedLanguage() {
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
+            this.changeLanguage(savedLanguage);
+            
+            // Update the selector to match the saved language
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+        } else {
+            // Apply default language translations
+            if (typeof updateAllTexts === 'function') {
+                setTimeout(updateAllTexts, 100);
+            }
         }
     }
 
@@ -22,6 +45,12 @@ class LanguageManager {
             languageSelect.addEventListener('change', (e) => {
                 this.changeLanguage(e.target.value);
             });
+        }
+    }
+    
+    changeLanguage(lang) {
+        if (typeof setLanguage === 'function') {
+            setLanguage(lang);
         }
     }
 

@@ -17,6 +17,7 @@ class NavigationManager {
         document.getElementById('constraints-btn').addEventListener('click', () => this.showSection('constraints'));
         document.getElementById('tasks-btn').addEventListener('click', () => this.showSection('tasks'));
         document.getElementById('resources-btn').addEventListener('click', () => this.showSection('resources'));
+        document.getElementById('beans-btn').addEventListener('click', () => this.showSection('beans'));
         document.getElementById('events-btn').addEventListener('click', () => this.showSection('events'));
         document.getElementById('objectives-btn').addEventListener('click', () => this.showSection('objectives'));
         document.getElementById('all-btn').addEventListener('click', () => this.showSection('all'));

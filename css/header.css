@@ -10,6 +10,31 @@ header {
     color: white;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 380px;
+    height: 380px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
 header h1 {
     font-size: 2.8em;
     color: white;
@@ -17,6 +42,7 @@ header h1 {
     font-weight: 700;
     letter-spacing: -0.02em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
 }
 
 .subtitle {
@@ -24,6 +50,32 @@ header h1 {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 25px;
     font-weight: 400;
+    margin: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .header-text {
+        text-align: center;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    .subtitle {
+        font-size: 1.1em;
+    }
 }
 
 .print-instructions {

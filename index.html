@@ -6,12 +6,43 @@
     <title>Workshop: La Máquina de Café - Sistema de Cartas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles-main.css">
+    <link rel="stylesheet" href="css/beans.css">
+    <link rel="stylesheet" href="css/card-size-fixes.css">
+    <style>
+        /* Critical bean styles that must be applied */
+        .bean-cost-display {
+            background: #8B4513 !important;
+            color: white !important;
+            padding: 8px !important;
+            margin: 8px 0 !important;
+            text-align: center !important;
+            font-weight: bold !important;
+            border-radius: 6px !important;
+            font-size: 14px !important;
+            border: 1px solid #654321 !important;
+            display: block !important;
+        }
+        
+        .constraint-bean-cost {
+            background: #dc3545 !important;
+            color: white !important;
+            padding: 8px !important;
+            margin: 8px 0 !important;
+            text-align: center !important;
+            font-weight: bold !important;
+            border-radius: 6px !important;
+            font-size: 14px !important;
+            border: 1px solid #c82333 !important;
+            display: block !important;
+        }
+    </style>
     <script src="js/translations-data.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/language.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/instructions.js"></script>
     <script src="js/template-loader.js"></script>
+    <script src="js/beans-display.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -28,8 +59,13 @@
     
     <div class="container">
         <header>
-            <h1>Coffee Machine Workshop</h1>
-            <p class="subtitle">Capacity and Resource Management System</p>
+            <div class="header-content">
+                <img src="logo.png" alt="Coffee Machine Workshop Logo" class="logo">
+                <div class="header-text">
+                    <h1>Coffee Machine Workshop</h1>
+                    <p class="subtitle">Capacity and Resource Management System</p>
+                </div>
+            </div>
             <div class="print-instructions">
                 <p><strong>Instructions:</strong> Select the cards you want to print and use Ctrl+P (Cmd+P on Mac)</p>
             </div>
@@ -40,6 +76,7 @@
             <button id="constraints-btn" class="nav-btn"><i class="fas fa-exclamation-triangle"></i> Constraints</button>
             <button id="tasks-btn" class="nav-btn"><i class="fas fa-wrench"></i> Tasks</button>
             <button id="resources-btn" class="nav-btn"><i class="fas fa-box"></i> Resources</button>
+            <button id="beans-btn" class="nav-btn"><i class="fas fa-coffee"></i> Beans</button>
             <button id="events-btn" class="nav-btn"><i class="fas fa-dice"></i> Events</button>
             <button id="objectives-btn" class="nav-btn"><i class="fas fa-bullseye"></i> Objectives</button>
             <button id="all-btn" class="nav-btn"><i class="fas fa-th"></i> All Cards</button>

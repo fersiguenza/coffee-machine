@@ -32,9 +32,8 @@
 }
 
 .coffee-amount {
-    font-size: 2.8em;
+    font-size: 2.8em !important;
     text-align: center;
-    margin: 20px 0;
     font-weight: 800;
     color: #8b4513;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -83,4 +82,23 @@
     color: white;
     border: 1px solid #dc3545;
     animation: urgentBadge 2s ease-in-out infinite;
+}
+
+/* Bean cost display for order cards */
+.order-card .bean-cost-display {
+    background: #8B4513;
+    color: white;
+    padding: 8px;
+    margin: 8px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid #654321;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important; /* Higher z-index to ensure visibility */
+    order: 1; /* Control position in flex container */
 }

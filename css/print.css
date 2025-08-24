@@ -2,11 +2,13 @@
 @media print {
     body {
         background: white !important;
-        font-size: 12pt;
+        font-size: 12pt; /* Restored original font size */
         -webkit-print-color-adjust: exact !important;
-        color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
+    
+    /* Force FontAwesome to load in print */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
     
     .container {
         max-width: none;
@@ -17,40 +19,101 @@
         display: none !important;
     }
     
+    .card-section h2 {
+        display: none !important;
+    }
+    
     .card-section {
         background: white !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .card-section h2 {
-        color: #2c3e50 !important;
-        margin-bottom: 15px !important;
-        font-size: 18pt !important;
-        page-break-after: avoid;
+        margin-bottom: 2px !important; /* Increased section bottom margin */
     }
     
     .cards-grid {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 10px !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Fixed 2 columns */
+        gap: 40px !important; /* Larger gap for landscape orientation */
+        page-break-inside: avoid !important;
+        grid-template-rows: 600px !important; /* Fixed height row */
+        grid-auto-rows: 600px !important; /* Fixed height for additional rows */
+        margin-top: 20px !important; 
+        margin-bottom: 20px !important;
+        padding: 10px !important;
+        align-items: center !important; /* Center cards vertically */
+        justify-content: center !important; /* Center cards horizontally */
+        width: 100% !important;
     }
     
+    /* Control page breaks - Using A4 paper in landscape orientation */
+    @page {
+        size: A4 landscape;
+        margin: 1cm; /* Adjusted margin for landscape orientation */
+    }
+    
+    /* Force 2 cards per page */
+    .cards-grid .card:nth-child(2n) {
+        page-break-after: always;
+    }
+    
+    .cards-grid .card:first-child {
+        page-break-before: auto;
+    }
+
     .card {
         background: white !important;
-        border: 2px solid #333 !important;
+        border: 3px solid #333 !important; /* Thicker border */
         border-radius: 8px !important;
-        padding: 12px !important;
+        padding: 15px !important;
         box-shadow: none !important;
         page-break-inside: avoid !important;
         break-inside: avoid !important;
-        margin-bottom: 10px !important;
-        font-size: 10pt !important;
+        margin-bottom: 15px !important;
+        margin-top: 35px !important;
+        font-size: 15pt !important;
         position: relative !important;
-        min-height: 200px !important;
+        width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
+        height: 580px !important; /* Fixed height for landscape orientation */
+        min-height: 580px !important;
+        max-height: 580px !important;
+        box-sizing: border-box !important; /* Include padding in height calculation */
+        overflow: hidden !important; /* Prevent content overflow */
+    }
+    
+    /* IMPORTANT: Make bean costs visible */
+    .bean-cost-display {
+        background: #8B4513 !important;
+        color: white !important;
+        padding: 8px !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+        font-weight: bold !important;
+        border-radius: 6px !important;
+        font-size: 11pt !important;
+        border: 1px solid #654321 !important;
+        display: block !important;
+    }
+    
+    /* Ensure coffee beans and icons are visible */
+    .bean, .bean-icon, .coffee-bean, .fa-coffee, .fas, .coffee-amount,
+    [class^="fa-"], [class*=" fa-"] {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Fix for coffee icon and bean symbol */
+    .coffee-amount, .coffee-amount i, .bean-cost-display, .constraint-bean-cost {
+        color: inherit !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
     
     .card:hover {
@@ -59,13 +122,21 @@
     }
     
     .card-header h3 {
-        font-size: 12pt !important;
+        font-size: 11pt !important;
         color: #2c3e50 !important;
+        margin-bottom: 5px !important;
+        white-space: normal !important;
     }
     
     .coffee-amount {
         font-size: 16pt !important;
         color: #8b4513 !important;
+    }
+    
+    /* Adjust typography for better fit */
+    .card p {
+        margin: 5px 0 !important;
+        line-height: 1.3 !important;
     }
     
     /* Keep colors for priority badges in print */
@@ -140,12 +211,51 @@
         border-left-color: #e74c3c !important;
     }
     
+    /* Keep colors for beans cards */
+    .beans-card {
+        border-left-color: #8B4513 !important;
+        background: linear-gradient(135deg, #f8f4e6 0%, #ede2c4 100%) !important;
+    }
+    
+    .beans-card .card-header {
+        background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%) !important;
+        color: white !important;
+    }
+    
+    .beans-card .bean-amount {
+        color: #8B4513 !important;
+        background: rgba(139, 69, 19, 0.1) !important;
+    }
+    
+    /* Bean cost display for print */
+    .bean-cost {
+        background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%) !important;
+        color: white !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+    .bean-cost.constraint {
+        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+        color: white !important;
+    }
+    
     /* Hide sections that aren't meant to be printed */
     .card-section[style*="display: none"] {
         display: none !important;
     }
     
-    /* Budget cards print styles */
+    /* Budget cards print styles - keep original grid layout */
+    #budget-section .cards-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    #budget-section .card {
+        height: auto !important; /* Budget cards keep flexible height */
+        min-height: 200px !important;
+    }
+    
     .budget-card {
         break-inside: avoid;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -181,5 +291,46 @@
     .tips-grid,
     .variations-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Card image sizing for print */
+    .card-image {
+        width: 160px !important;
+        height: 160px !important;
+        margin: 2px auto 5px !important;
+        object-fit: contain !important;
+    }
+    
+    .card-image-container {
+        text-align: center !important;
+        margin-bottom: 5px !important;
+    }
+    
+    /* Ensure content fits without overflow or scrollbars */
+    .card-content {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; /* Align from top to ensure all content is visible */
+    }
+    
+    /* Optimize font sizes for print to ensure all content fits */
+    .card-content p {
+        margin: 1px 0 !important;
+        line-height: 1.3 !important;
+        font-size: 12pt !important; /* Adjusted for landscape layout */
+    }
+    
+    /* Adjust header for landscape orientation */
+    .card-header h3 {
+        font-size: 12pt !important; 
+        margin-bottom: 5px !important;
+        margin-top: 2px !important;
+    }
+    
+    /* Fix for card footer to ensure it stays at bottom */
+    .card-footer {
+        margin-top: auto !important;
+        font-size: 18pt !important;
     }
 }

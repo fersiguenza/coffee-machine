@@ -1,0 +1,61 @@
+/* Bean Cost Styles - These will override any existing styles */
+
+.bean-cost-display {
+    background: #8B4513 !important;
+    color: white !important;
+    padding: 8px !important;
+    margin: 8px 0 !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    border: 1px solid #654321 !important;
+    display: block !important;
+}
+
+/* Constraint bean costs */
+.constraint-bean-cost {
+    background: #dc3545 !important;
+    color: white !important;
+    padding: 8px !important;
+    margin: 8px 0 !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    border: 1px solid #c82333 !important;
+    display: block !important;
+}
+
+/* Print styles for bean costs */
+@media print {
+    .bean-cost-display {
+        background: #8B4513 !important;
+        color: white !important;
+        padding: 8px !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+        font-weight: bold !important;
+        border-radius: 6px !important;
+        font-size: 11pt !important;
+        border: 1px solid #654321 !important;
+        display: block !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .constraint-bean-cost {
+        background: #dc3545 !important;
+        color: white !important;
+        padding: 8px !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+        font-weight: bold !important;
+        border-radius: 6px !important;
+        font-size: 11pt !important;
+        border: 1px solid #c82333 !important;
+        display: block !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

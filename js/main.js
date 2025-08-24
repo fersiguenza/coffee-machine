@@ -67,6 +67,28 @@ class CoffeeMachineApp {
                 }
             }
         });
+        
+        // Add observer to update translations when template content changes
+        this.observeContentChanges();
+    }
+    
+    observeContentChanges() {
+        // Create a MutationObserver to detect when the content area changes
+        const contentArea = document.getElementById('content-area');
+        if (contentArea && window.MutationObserver) {
+            const observer = new MutationObserver((mutations) => {
+                // When content changes, update translations
+                if (typeof updateAllTexts === 'function') {
+                    setTimeout(updateAllTexts, 150); // Slight delay to ensure DOM is ready
+                }
+            });
+            
+            // Start observing the content area for changes
+            observer.observe(contentArea, { 
+                childList: true,
+                subtree: true 
+            });
+        }
     }
 
     printCurrentSection() {
